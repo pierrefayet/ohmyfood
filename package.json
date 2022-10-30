@@ -10,15 +10,7 @@
     "sass": "sass --watch ./scss/main.scss:./css/style.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"                                                                                                          
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pierrefayet/projet-3.git"
-  },
   "author": "",
   "license": "ISC",
-  "browserlist": "last 4 version",
-  "bugs": {
-    "url": "https://github.com/pierrefayet/projet-3/issues"
-  },
-  "homepage": "https://github.com/pierrefayet/projet-3#readme"
+  "browserlist": "last 4 version"
 }
