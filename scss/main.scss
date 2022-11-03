@@ -13,7 +13,9 @@
 body {
     width: 100%;
     font-family: robotoregular, Arial, sans-serif;
+    background-color:rgb(213, 213, 213);
 }
+
 #header {
     display: flex;
     width: 100%;
@@ -41,6 +43,7 @@ body {
 }
 .fa-arrow-left {
     color:black;
+    font-size: x-large;
 }
 .content__card--media img{
     width: 100%;
@@ -48,12 +51,30 @@ body {
     z-index: 1;
 }
 #content {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(213, 213, 213);
     border-radius: 50px;
     position: relative;
     margin-top: -4rem;
     width: 100%;
     z-index: 1;
+    .btn__command {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        button {
+            border-radius: 20px;
+            border: none;
+            background-color: blueviolet;
+            height: 50px;
+            width: 200px;
+            color: aliceblue;
+            font-size: inherit;
+            font-weight: bold;
+            box-shadow: 5px 5px 10px ;
+        }
+    }    
     .content__menu {
         margin-right: 20px;
         margin-left: 20px;
@@ -61,14 +82,17 @@ body {
     .content__title {
         display: flex;
         justify-content: space-between;
-        padding: 20px 50px 30px 30px;
+        padding: 20px 0px 30px 30px;
         }
         .content__title--cta {
             display: flex;
             align-items: center;
             font-size: xx-large;
+            .fa-heart {
+                margin-right: 62px;
+            }
         }
-    h1 {
+    h2 {
         font-family: 'Shrikhand', Arial, sans-serif;
     }
     h2 {
@@ -83,7 +107,6 @@ body {
     border-radius: 20px;
     margin-bottom: 20px;
     height: 90px;
-    
     .text {
         padding: 10px;
         h3 {
@@ -102,7 +125,7 @@ body {
         padding-bottom: 20px;
         padding-right: 50px;
         span {
-            font-weight: 300;
+            font-weight: bold;
         }
     }
     .fa-circle-check {
@@ -112,7 +135,7 @@ body {
 footer {
     background-color: #353535;
     .footer__contain {
-        padding: 2rem;
+        padding: 1.7rem;
         .footer__item {
             display: flex;
             align-items: center;
@@ -122,6 +145,25 @@ footer {
                 margin: 0;
                 padding-bottom: 0.5rem;
             }
+            .fa-handshake-angle {
+                padding-right: 10px;
+            }
+            .fa-utensils {
+                padding-right: 17px;
+            }
+            p {
+                display: flex;
+                justify-content: flex-start;
+                font-size: large;
+                font-weight: bold;
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: large;
+            }
         }
     }    
 }
@@ -130,4 +172,10 @@ footer {
     font-family: Shrikhand,"cursive";
     font-size: 1.2rem;
     margin: 0 0 1rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
 }

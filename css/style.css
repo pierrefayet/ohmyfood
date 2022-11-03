@@ -12,6 +12,7 @@
 body {
   width: 100%;
   font-family: robotoregular, Arial, sans-serif;
+  background-color: rgb(213, 213, 213);
 }
 
 #header {
@@ -42,6 +43,7 @@ body {
 
 .fa-arrow-left {
   color: black;
+  font-size: x-large;
 }
 
 .content__card--media img {
@@ -51,12 +53,30 @@ body {
 }
 
 #content {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(213, 213, 213);
   border-radius: 50px;
   position: relative;
   margin-top: -4rem;
   width: 100%;
   z-index: 1;
+}
+#content .btn__command {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#content .btn__command button {
+  border-radius: 20px;
+  border: none;
+  background-color: blueviolet;
+  height: 50px;
+  width: 200px;
+  color: aliceblue;
+  font-size: inherit;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px;
 }
 #content .content__menu {
   margin-right: 20px;
@@ -65,14 +85,17 @@ body {
 #content .content__title {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px 30px 30px;
+  padding: 20px 0px 30px 30px;
 }
 #content .content__title--cta {
   display: flex;
   align-items: center;
   font-size: xx-large;
 }
-#content h1 {
+#content .content__title--cta .fa-heart {
+  margin-right: 62px;
+}
+#content h2 {
   font-family: "Shrikhand", Arial, sans-serif;
 }
 #content h2 {
@@ -107,7 +130,7 @@ body {
   padding-right: 50px;
 }
 .content__menu--card .price span {
-  font-weight: 300;
+  font-weight: bold;
 }
 .content__menu--card .fa-circle-check {
   display: none;
@@ -117,7 +140,7 @@ footer {
   background-color: #353535;
 }
 footer .footer__contain {
-  padding: 2rem;
+  padding: 1.7rem;
 }
 footer .footer__contain .footer__item {
   display: flex;
@@ -129,12 +152,38 @@ footer .footer__contain .footer__item h3 {
   margin: 0;
   padding-bottom: 0.5rem;
 }
+footer .footer__contain .footer__item .fa-handshake-angle {
+  padding-right: 10px;
+}
+footer .footer__contain .footer__item .fa-utensils {
+  padding-right: 17px;
+}
+footer .footer__contain .footer__item p {
+  display: flex;
+  justify-content: flex-start;
+  font-size: large;
+  font-weight: bold;
+  margin: 0;
+}
+footer .footer__contain .footer__item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+}
 
 .footer__logo {
   color: #fff;
   font-family: Shrikhand, "cursive";
   font-size: 1.2rem;
   margin: 0 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
 }
 
 /*# sourceMappingURL=style.css.map */
