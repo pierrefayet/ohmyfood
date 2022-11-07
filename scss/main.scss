@@ -113,6 +113,7 @@ body {
     height: 90px;
     box-shadow: 5px 5px 5px rgb(212, 212, 212);
     cursor: pointer;
+    animation: menuEffect 1s linear fill-mode;
     .text {
         padding: 10px;
         h3 {
@@ -273,13 +274,13 @@ footer {
         font-weight: bold;
         box-shadow: 5px 5px 10px;
         margin-top: 10px;
-        transition: transform 300ms;
+        transition: transform 300ms ease-in-out;
        
     }
     & button:hover {
         transform: scale(1.1);
         opacity: 0.8;
-        background-color: #353535;
+        opacity: #353535;
     }
     
 }
@@ -303,7 +304,7 @@ footer {
             box-shadow: 5px 5px 5px rgb(212, 212, 212);
             margin-bottom: 20px;
             &:hover {
-                background-color: rgba(147,86,220,0.1);
+                opacity: rgba(147,86,220,0.1);
                 i {
                     color: $primary;
                 }
@@ -371,7 +372,6 @@ footer {
     }
 } 
 
-
 .card__content {
     display: flex;
     justify-content: space-between;
@@ -391,6 +391,19 @@ footer {
         width: 30px;
         font-size: x-large;
         margin: 10px 20px 0px 0px;
+        position: relative;
+        i:hover{
+            color: transparent;
+            background-image: linear-gradient($primary,$secondary);
+            background-clip: text;
+            position: absolute;
+            top: 4px;
+            right: 6px;
+            opacity: 1;
+            transition: all 0.8s;
+            font-weight: 900;
         }
+    }    
 } 
+
 
