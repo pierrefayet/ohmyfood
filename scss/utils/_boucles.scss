@@ -1,0 +1,5 @@
+@for $i from 1 through 10 {
+    .content__menu--card:nth-child(#{$i}) {
+        animation: menuEffect 0.5s $i*0.2s both;
+    }
+}

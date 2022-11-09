@@ -1,10 +1,44 @@
 @keyframes menuEffect {
   0% {
-    transform: translateY(50px);
+    transform: translateY(0%);
     opacity: 0; 
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(20%);
     opacity: 1;
   }
 }
+
+@keyframes opacityPage {
+  0% {
+    visibility: visible;
+    opacity: 1;
+
+  }
+  
+  100%{
+    opacity: 0.5;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderInfinite {
+  0% {
+    visibility: visible;
+  }
+  
+  100% {
+    visibility: visible;
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes dotty {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+

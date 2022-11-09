@@ -15,3 +15,18 @@
         @content;
     }
 }
+
+@mixin heartEffect {
+    i:hover{
+        color: transparent;
+        background-image: linear-gradient($primary,$secondary);
+        background-clip: text;
+        position: absolute;
+        top: 4px;
+        right: 6px;
+        opacity: 1;
+        transition: all 0.8s;
+        font-weight: 900;
+        @content;
+    }
+}

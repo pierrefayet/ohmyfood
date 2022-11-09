@@ -1,8 +1,8 @@
 @import "./utils/variables";
 @import "./Base/fonts";
-@import "./utils/mixin.scss";
+@import "./utils/mixins.scss";
 @import "./utils/keyframes";
-
+@import "./utils/boucles";
 body {
     width: 100%;
     font-family: robotoregular, Arial, sans-serif;
@@ -17,7 +17,6 @@ body {
     margin: 10px 0 10px 0;
     justify-content: center;
     position: relative;
-    background-color: yellow;
     .header__content {
         display: flex;
         width: 100%;
@@ -105,20 +104,16 @@ body {
             align-items: center;
             font-size: xx-large;
             justify-content: flex-end;
+            i:hover {
+                color: transparent;
+                background-image: linear-gradient($primary,$secondary);
+                background-clip: text;
+                opacity: 1;
+                transition: all 0.8s;
+                font-weight: 900;
+            }
             .fa-heart {
-                margin-right: 40px;
-                i:hover {
-                    color: transparent;
-                    background-image: linear-gradient($primary,$secondary);
-                    background-clip: text;
-                    position: absolute;
-                    top: 4px;
-                    right: 6px;
-                    opacity: 1;
-                    transition: all 0.8s;
-                    font-weight: 900;
-                }
-
+                margin-right: 70px;
             }
         }
     h3 {
@@ -220,6 +215,7 @@ footer {
         }
     }    
 }
+
 .footer__logo {
     color: #fff;
     font-family: Shrikhand, Arial, sans-serif;
@@ -228,8 +224,57 @@ footer {
     margin: 0 0 1rem;
 }
 
-
 /*--home page--*/
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    animation: opacityPage 2s linear;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    .loading__circle {
+        border: 10px solid transparent;
+        border-top: 10px solid #9356DC;
+        border-bottom: 10px solid #FF79DA;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        border-style: dashed;
+        animation: loaderInfinite 2s linear;
+    }    
+    .loading__circle--text {
+        display: inline-block;
+        background: linear-gradient($primary,$secondary);
+        background-clip: text;
+        width: 178px;
+        background-clip: text;
+        font-weight: bold;
+        font-size: x-large;
+        letter-spacing: 2px;
+        color: transparent;
+    }
+    .loading__circle--text::after {
+        display: inline-block;
+        animation: dotty steps(1,end) 1s infinite;
+        content: " ";
+    }
+}
+
 #header__welcome {
     height: 142px;
     .header__logo {
@@ -280,6 +325,7 @@ footer {
         }
     }
 }
+
 .reservation {
     display: flex;
     flex-direction: column;
@@ -323,6 +369,7 @@ footer {
     }
     
 }
+
 #functioning {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -466,17 +513,7 @@ footer {
         font-size: x-large;
         margin: 10px 20px 0px 0px;
         position: relative;
-        i:hover{
-            color: transparent;
-            background-image: linear-gradient($primary,$secondary);
-            background-clip: text;
-            position: absolute;
-            top: 4px;
-            right: 6px;
-            opacity: 1;
-            transition: all 0.8s;
-            font-weight: 900;
-        }
+        @include heartEffect;
     }    
 } 
 
