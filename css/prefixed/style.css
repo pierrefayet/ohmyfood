@@ -958,7 +958,7 @@ footer .footer__contain .footer__item .email {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin: auto;
-    width: 80%;
+    width: 70%;
   }
   #restaurants .restaurants__content > div {
     width: 600px;
