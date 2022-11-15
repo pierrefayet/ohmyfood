@@ -129,6 +129,15 @@ body {
         }
     h3 {
         text-transform: uppercase;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 40px;
+            border-bottom: 2px solid $tertiary;
+            display: block;
+        }
     }    
     h2 {
         font-family: 'Shrikhand', Arial, sans-serif;
