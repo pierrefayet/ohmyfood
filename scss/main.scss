@@ -66,7 +66,15 @@ body {
     margin-top: -4rem;
     width: 100%;
     z-index: 1;
-    
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
     .btn__command {
         width: 100%;
         display: flex;
@@ -96,8 +104,11 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 20px 20px 30px 30px;
-        background-color: red($color: #000000);
         position: relative;
+        @include desktop {
+           width: 100%;
+           margin: auto;
+        }
         }
         .content__title--cta {
             display: flex;
@@ -141,17 +152,41 @@ body {
     animation-delay: 2s;
     animation-timing-function: cubic-bezier(.5, 1.60, 0.40, 1);
     animation-fill-mode: both;
-    
+    &:hover .fa-circle-check {
+        animation: turnCircle 0.5s both;
+    }
+    &:hover  .validate {
+        animation: slide-left 0.5s ease both;
+        
+    }
+    &:hover .price {
+        animation: slide-leftPrice 0.5s ease both;
+    }
+    &:hover .text {
+        animation: textEffect 0.5s ease both;
+    }
+    @include desktop {
+        width: 350px;
+        height: 90px;
+    }
     .text {
         padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
         h3 {
             margin: 0;
             padding-bottom: 5px;
             padding-top: 10px;
         }
         h4 {
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-weight: 100;
             margin: 0;
+        }
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     .price {
@@ -163,8 +198,22 @@ body {
             font-weight: bold;
         }
     }
-    .fa-circle-check {
-        display: none;
+    .validate {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        background-color: #99E2D0;
+        height: 100%;
+        width: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 20px 20px 0px;
+        visibility: hidden;
+        .fa-circle-check {
+            font-size: x-large;
+            color: #fff;
+        }
     }
 }
 

@@ -39,6 +39,11 @@
     transform: rotate(360deg);
   }
 }
+@keyframes textEffect {
+  100% {
+    width: 50%;
+  }
+}
 @keyframes dotty {
   0% {
     content: "";
@@ -54,6 +59,41 @@
   }
   100% {
     content: "";
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    width: 20%;
+    visibility: visible;
+  }
+}
+@keyframes slide-leftPrice {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    width: 15%;
+    opacity: 1;
+  }
+}
+@keyframes turnCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .content__menu--card:nth-child(1) {
@@ -160,6 +200,19 @@ body {
   width: 100%;
   z-index: 1;
 }
+@media screen and (min-width: 1297px) {
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 1297px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #content .btn__command {
   width: 100%;
   display: flex;
@@ -189,8 +242,13 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 30px 30px;
-  background-color: 0;
   position: relative;
+}
+@media screen and (min-width: 1297px) {
+  #content .content__title {
+    width: 100%;
+    margin: auto;
+  }
 }
 #content .content__title--cta {
   display: flex;
@@ -234,8 +292,28 @@ body {
   animation-timing-function: cubic-bezier(0.5, 1.6, 0.4, 1);
   animation-fill-mode: both;
 }
+.content__menu--card:hover .fa-circle-check {
+  animation: turnCircle 0.5s both;
+}
+.content__menu--card:hover .validate {
+  animation: slide-left 0.5s ease both;
+}
+.content__menu--card:hover .price {
+  animation: slide-leftPrice 0.5s ease both;
+}
+.content__menu--card:hover .text {
+  animation: textEffect 0.5s ease both;
+}
+@media screen and (min-width: 1297px) {
+  .content__menu--card {
+    width: 350px;
+    height: 90px;
+  }
+}
 .content__menu--card .text {
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .content__menu--card .text h3 {
   margin: 0;
@@ -243,8 +321,14 @@ body {
   padding-top: 10px;
 }
 .content__menu--card .text h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 100;
   margin: 0;
+}
+.content__menu--card .text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content__menu--card .price {
   display: flex;
@@ -255,8 +339,22 @@ body {
 .content__menu--card .price span {
   font-weight: bold;
 }
-.content__menu--card .fa-circle-check {
-  display: none;
+.content__menu--card .validate {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  visibility: hidden;
+}
+.content__menu--card .validate .fa-circle-check {
+  font-size: x-large;
+  color: #fff;
 }
 
 /*--footer--*/
@@ -266,7 +364,7 @@ footer {
 footer .footer__contain {
   padding: 1.7rem;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   footer .footer__contain {
     display: flex;
     justify-content: space-around;
@@ -304,7 +402,7 @@ footer .footer__contain .footer__item .email {
   font-weight: bolder;
   font-size: large;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   footer .footer__contain .footer__item .email {
     padding-bottom: 10px;
   }
@@ -470,7 +568,7 @@ footer .footer__contain .footer__item .email {
   font-size: x-large;
   margin-left: 20px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   #functioning .functioning__title {
     text-align: center;
     margin: 0;
@@ -482,7 +580,7 @@ footer .footer__contain .footer__item .email {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   #functioning .functioning__stages {
     display: flex;
     flex-direction: row;
@@ -534,7 +632,7 @@ footer .footer__contain .footer__item .email {
 #restaurants h3 {
   margin-left: 20px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   #restaurants h3 {
     text-align: center;
     font-size: x-large;
@@ -544,7 +642,7 @@ footer .footer__contain .footer__item .email {
 #restaurants .restaurants__content {
   padding: 20px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1297px) {
   #restaurants .restaurants__content {
     display: flex;
     flex-wrap: wrap;

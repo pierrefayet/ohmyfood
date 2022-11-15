@@ -3,6 +3,7 @@
     transform: translateY(0%);
     opacity: 0; 
   }
+
   100% {
     transform: translateY(20%);
     opacity: 1;
@@ -33,6 +34,14 @@
   }
 }
 
+@keyframes textEffect {
+  0% {}
+  
+  100% {
+    width: 50%;
+  }
+}
+
 @keyframes dotty {
   0%   { content: ''; }
   25%  { content: '.'; }
@@ -41,4 +50,41 @@
   100% { content: ''; }
 }
 
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+            visibility: hidden;
+      }
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+            width: 20%;
+            visibility: visible;
+  }
+}
 
+@keyframes slide-leftPrice {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+            width: 0%;
+            opacity: 0;
+      }
+
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+            width: 15%;
+            opacity: 1;
+        }
+}
+
+@keyframes turnCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

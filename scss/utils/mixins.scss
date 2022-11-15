@@ -1,5 +1,5 @@
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints,desktop)){
+    @media screen and (min-width: map-get($breakpoints, desktop)){
         @content;
     }
 }
@@ -11,7 +11,7 @@
 }
 
 @mixin tablets {
-    @media screen and (min-width: map-get($breakpoints, mobile)) {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
@@ -28,5 +28,12 @@
         transition: all 0.8s;
         font-weight: 900;
         @content;
+    }
+}
+
+@mixin cardMenu {
+    div:hover{
+    transform: translateY(10px,10px);
+    @content
     }
 }
