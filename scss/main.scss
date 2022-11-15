@@ -1,5 +1,5 @@
 @import "./utils/variables";
-@import "./Base/fonts";
+@import "./base/fonts";
 @import "./utils/mixins.scss";
 @import "./utils/keyframes";
 @import "./utils/boucles";
@@ -129,16 +129,19 @@ body {
         }
     h3 {
         text-transform: uppercase;
-        &:after {
-            content: "";
+        position: relative;
+        &::after {
+            content: " ";
             position: absolute;
             left: 0;
             bottom: -5px;
             width: 40px;
             border-bottom: 2px solid $tertiary;
-            display: block;
+            
         }
-    }    
+    }
+    
+       
     h2 {
         font-family: 'Shrikhand', Arial, sans-serif;
         font-weight: 100;
