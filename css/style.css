@@ -63,10 +63,12 @@
 }
 @keyframes slide-left {
   0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     visibility: hidden;
   }
   100% {
+    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
     width: 20%;
     visibility: visible;
@@ -74,11 +76,13 @@
 }
 @keyframes slide-leftPrice {
   0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     width: 0%;
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
     width: 15%;
     opacity: 1;
@@ -166,17 +170,28 @@ body {
 }
 #header .header__content .header__content--logo img {
   box-sizing: border-box;
-  width: 250px;
+  width: 180px;
   height: 80px;
   object-fit: contain;
+}
+@media screen and (max-width: 415px) {
+  #header .header__content .header__content--logo img {
+    width: 120px;
+  }
 }
 
 .fa-arrow-left {
   color: black;
   font-size: x-large;
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 40px;
+}
+@media screen and (max-width: 415px) {
+  .fa-arrow-left {
+    left: 10px;
+    font-size: medium;
+  }
 }
 
 .content__card--media img {
@@ -562,7 +577,6 @@ footer .footer__contain .footer__item .email {
 .reservation button:hover {
   transform: scale(1.1);
   opacity: 0.8;
-  opacity: #353535;
 }
 
 #functioning {
@@ -603,7 +617,6 @@ footer .footer__contain .footer__item .email {
   margin-bottom: 20px;
 }
 #functioning .functioning__stages div:hover {
-  opacity: rgba(147, 86, 220, 0.1);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
   background-color: #ffd9ff;
 }
@@ -636,11 +649,11 @@ footer .footer__contain .footer__item .email {
 }
 #restaurants h3 {
   margin-left: 20px;
+  font-size: x-large;
 }
 @media screen and (min-width: 1297px) {
   #restaurants h3 {
     text-align: center;
-    font-size: x-large;
     margin: 0;
   }
 }
