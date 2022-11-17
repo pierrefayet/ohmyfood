@@ -180,6 +180,9 @@ body {
     }
     &:hover .price {
         animation: slide-leftPrice 0.5s ease both;
+        @include tablette{
+        padding-right: 70px;
+        }
     }
     &:hover .text {
         animation: textEffect 0.5s ease both;
