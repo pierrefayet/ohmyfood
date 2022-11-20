@@ -176,6 +176,9 @@ body {
     }
     &:hover  .validate {
         animation: slide-left 0.5s ease both;
+        @include tablets {
+            width: 10%;
+            }
         
     }
     &:hover .price {
