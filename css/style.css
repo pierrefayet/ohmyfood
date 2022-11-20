@@ -41,7 +41,7 @@
 }
 @keyframes textEffect {
   100% {
-    width: 25%;
+    width: 50%;
   }
 }
 @keyframes dotty {
@@ -71,6 +71,19 @@
     -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
     width: 20%;
+    visibility: visible;
+  }
+}
+@keyframes slide-left-tablets {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    width: 10%;
     visibility: visible;
   }
 }
@@ -174,7 +187,7 @@ body {
   height: 80px;
   object-fit: contain;
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 455px) {
   #header .header__content .header__content--logo img {
     width: 120px;
   }
@@ -187,7 +200,7 @@ body {
   top: 30px;
   left: 40px;
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 455px) {
   .fa-arrow-left {
     left: 10px;
     font-size: medium;
@@ -218,7 +231,7 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 415px) and (max-width: 1297px) {
+@media screen and (min-width: 455px) and (max-width: 1297px) {
   #content {
     display: flex;
     flex-direction: column;
@@ -318,15 +331,15 @@ body {
 .content__menu--card:hover .validate {
   animation: slide-left 0.5s ease both;
 }
-@media screen and (min-width: 415px) and (max-width: 1297px) {
+@media screen and (min-width: 455px) and (max-width: 1297px) {
   .content__menu--card:hover .validate {
-    width: 10%;
+    animation: slide-left-tablets 0.5s ease both;
   }
 }
 .content__menu--card:hover .price {
   animation: slide-leftPrice 0.5s ease both;
 }
-@media screen and (min-width: 415px) and (max-width: 1297px) {
+@media screen and (min-width: 455px) and (max-width: 1297px) {
   .content__menu--card:hover .price {
     padding-right: 70px;
   }

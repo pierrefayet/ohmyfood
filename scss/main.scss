@@ -177,7 +177,7 @@ body {
     &:hover  .validate {
         animation: slide-left 0.5s ease both;
         @include tablets {
-            width: 10%;
+            animation: slide-left-tablets 0.5s ease both;
             }
         
     }
