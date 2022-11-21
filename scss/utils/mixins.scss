@@ -9,6 +9,11 @@
         @content;
     }
 }
+@mixin smallSmartphone {
+    @media screen and (max-width: map-get($breakpoints, smallMobile)) {
+        @content;
+    }    
+}
 
 @mixin tablets {
     @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
@@ -36,4 +41,24 @@
     transform: translateY(10px,10px);
     @content
     }
+}
+@mixin button {
+    width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50px;
+        border: none;
+        background-image: linear-gradient($secondary, $primary);
+        cursor: pointer;
+        height: 60px;
+        width: 220px;
+        color: aliceblue;
+        font-size: inherit;
+        font-weight: bold;
+        box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.42);
+        margin-top: 30px;
+        transition: transform 300ms ease-in-out;
 }

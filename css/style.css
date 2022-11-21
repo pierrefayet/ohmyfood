@@ -25,6 +25,10 @@
     visibility: visible;
     opacity: 1;
   }
+  75% {
+    visibility: visible;
+    opacity: 1;
+  }
   100% {
     opacity: 0.5;
     visibility: hidden;
@@ -238,23 +242,33 @@ body {
   }
 }
 #content .btn__command {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#content .btn__cta {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-#content .btn__command button {
   border-radius: 50px;
   border: none;
-  background: linear-gradient(#FF79DA, #9356DC);
-  height: 70px;
-  width: 300px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  height: 60px;
+  width: 220px;
   color: aliceblue;
   font-size: inherit;
   font-weight: bold;
-  box-shadow: 5px 5px 10px;
-  cursor: pointer;
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.42);
+  margin-top: 30px;
+  transition: transform 300ms ease-in-out;
+}
+#content button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 #content .content__menu {
   display: flex;
@@ -291,6 +305,11 @@ body {
 #content .content__title--cta .fa-heart {
   margin-right: 70px;
 }
+@media screen and (max-width: 400px) {
+  #content .content__title--cta .fa-heart {
+    margin-right: 0;
+  }
+}
 #content h3 {
   text-transform: uppercase;
   position: relative;
@@ -306,6 +325,11 @@ body {
 #content h2 {
   font-family: "Shrikhand", Arial, sans-serif;
   font-weight: 100;
+}
+@media screen and (max-width: 400px) {
+  #content h2 {
+    font-size: 20px;
+  }
 }
 
 .content__menu--card {
@@ -378,6 +402,11 @@ body {
   align-items: flex-end;
   padding-bottom: 20px;
   padding-right: 50px;
+}
+@media screen and (max-width: 400px) {
+  .content__menu--card .price {
+    padding-right: 25px;
+  }
 }
 .content__menu--card .price span {
   font-weight: bold;
@@ -596,6 +625,7 @@ footer .footer__contain .footer__item .email {
   box-shadow: 5px 5px 10px;
   margin-top: 10px;
   transition: transform 300ms ease-in-out;
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.42);
 }
 .reservation button:hover {
   transform: scale(1.1);
@@ -632,7 +662,6 @@ footer .footer__contain .footer__item .email {
 #functioning .functioning__stages div {
   display: flex;
   align-items: center;
-  width: 280px;
   border-radius: 25px;
   padding: 30px 20px;
   background-color: rgb(246, 246, 246);
@@ -641,7 +670,7 @@ footer .footer__contain .footer__item .email {
 }
 #functioning .functioning__stages div:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  background-color: #ffd9ff;
+  background-color: rgba(233, 217, 255, 0.6509803922);
 }
 #functioning .functioning__stages div:hover i {
   color: #9356DC;
